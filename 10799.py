@@ -14,5 +14,4 @@ for i in range(len(char)):
             num += 1
         elif char[i-1] == ')':
             ans += 1
-           
 print(ans)
