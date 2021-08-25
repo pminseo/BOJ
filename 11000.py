@@ -13,4 +13,5 @@ for i in range(1, n):
         else:
             que[j] = arr[i][1]
             break
+            
 print(len(que))
