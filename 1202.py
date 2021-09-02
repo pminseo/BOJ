@@ -2,25 +2,27 @@ import sys
 input = sys.stdin.readline
 
 n, k = map(int, input().split())
-jewely = []
-for i in range(n):
-    jewely.append(list(map(int, input().split())))
-bag = []
-for j in range(k):
-    bag.append(int(input()))
-jewely.sort()
+
+jewely = [ list(map(int, input().split())) for _ in range(n)]
+bag = [ int(input()) for _ in range(k)]
+
+jewely.sort(key=lambda x:x[1], reverse=True)
 bag.sort()
 
-val = 0
-tmp = []
-
-for b in bag:
-    while jewely and b >= jewely[0][0]:
-        tmp.append(jewely[0][1])
-        jewely.pop(0)
-    if tmp:
-        val += tmp.pop(0)
-    elif not jewely:
-        break
-
-print(val)
+sum = 0
+c = 0
+while bag:
+    for b in bag:
+        a = 0
+        if not jewely:
+            break
+        for j in jewely:
+            if j[0] <= b:
+                sum += j[1]
+                del bag[c]
+                del jewely[a]
+            elif j[0] > b:
+                a += 1
+            elif j == jewely[-1]:
+                c += 1
+print(sum)
