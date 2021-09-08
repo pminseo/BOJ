@@ -23,3 +23,4 @@ elif N > K:
     print(N-K)
 else:
     print(0)
+    
