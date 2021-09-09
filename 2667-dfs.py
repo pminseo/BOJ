@@ -37,3 +37,4 @@ for l in lst:
 ans.sort()
 for s in ans:
     print(s)
+    
