@@ -35,3 +35,4 @@ for _ in range(t):
             bfs(i, j)
             count += 1
     print(count)
+    
