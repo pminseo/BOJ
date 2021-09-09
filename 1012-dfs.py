@@ -30,3 +30,4 @@ for _ in range(t):
             dfs(i, j)
             count += 1
     print(count)
+    
