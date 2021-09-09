@@ -51,4 +51,3 @@ for w in lst:
 
 # for o in graph:
 #     print(o)
-# 56% 
